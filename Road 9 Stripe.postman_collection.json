@@ -1,0 +1,272 @@
+{
+	"info": {
+		"_postman_id": "8acc9d31-6c9b-4444-b333-cb174248b59d",
+		"name": "Road 9 Stripe",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4906867"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/saveCard",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzAwNjQ4NDc5LCJleHAiOjE3MDA2NTIwNzksIm5iZiI6MTcwMDY0ODQ3OSwianRpIjoiNmhUYUxEZXhFWDJFUFpHZCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.qY0w9w9jBjCmTZV_LyHP67a6_jNRG-mQKIW0Gy1B3OE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "customer",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "user@user.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "customer",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "1000",
+							"type": "text"
+						},
+						{
+							"key": "card_number",
+							"value": "4242424242424242",
+							"type": "text"
+						},
+						{
+							"key": "exp_month",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "exp_year",
+							"value": "2025",
+							"type": "text"
+						},
+						{
+							"key": "cvc",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "currency",
+							"value": "usd",
+							"type": "text"
+						},
+						{
+							"key": "customer_id",
+							"value": "cus_P3Kq4RpEf926Fj",
+							"type": "text"
+						},
+						{
+							"key": "cardToken",
+							"value": "tok_1OFDlBAJYTcDHNxRTziuqlNs",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/saveCard",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"saveCard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/generateCardToken",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzAwNjQ4NDc5LCJleHAiOjE3MDA2NTIwNzksIm5iZiI6MTcwMDY0ODQ3OSwianRpIjoiNmhUYUxEZXhFWDJFUFpHZCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.qY0w9w9jBjCmTZV_LyHP67a6_jNRG-mQKIW0Gy1B3OE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "card_number",
+							"value": "4000056655665556",
+							"type": "text"
+						},
+						{
+							"key": "exp_month",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "exp_year",
+							"value": "2025",
+							"type": "text"
+						},
+						{
+							"key": "cvc",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/generateCardToken",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"generateCardToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/chargeUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzAwNjQ4NDc5LCJleHAiOjE3MDA2NTIwNzksIm5iZiI6MTcwMDY0ODQ3OSwianRpIjoiNmhUYUxEZXhFWDJFUFpHZCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.qY0w9w9jBjCmTZV_LyHP67a6_jNRG-mQKIW0Gy1B3OE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "cardToken",
+							"value": "card_1OFDlBAJYTcDHNxRizj1AI9t",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "customer_id",
+							"value": "cus_P3Kq4RpEf926Fj",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/chargeUser",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"chargeUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/create-customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzAwNjQ4NDc5LCJleHAiOjE3MDA2NTIwNzksIm5iZiI6MTcwMDY0ODQ3OSwianRpIjoiNmhUYUxEZXhFWDJFUFpHZCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.qY0w9w9jBjCmTZV_LyHP67a6_jNRG-mQKIW0Gy1B3OE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "yousry",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "yousry@yousry.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/create-customer",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"create-customer"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
